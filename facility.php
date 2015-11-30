@@ -11,7 +11,6 @@
  */
 
 require_once('../../config.php');
-require_once('./locallib.php');
 require_once('./forms.php');
 require_once($CFG->dirroot.'/lib/adminlib.php');
 require_once($CFG->dirroot.'/user/profile/lib.php');

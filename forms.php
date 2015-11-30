@@ -67,7 +67,7 @@ class local_meditraxcohort_add_form extends moodleform {
             $error['idnumber'] = get_string('formvalidation:idnumber', 'local_meditraxcohort');
         } else {
             if ($DB->record_exists("cohort", array("idnumber" => $idnumber))) {
-                $error['name'] = get_string('dbvalidation:idnumber', 'local_meditraxcohort');
+                $error['idnumber'] = get_string('dbvalidation:idnumber', 'local_meditraxcohort');
             }
         }
         return (count($error) == 0) ? true : $error;
