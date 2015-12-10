@@ -134,9 +134,9 @@ if ($whatform == 'topic') {
                         FROM {cohort_members}
                         WHERE cohortid  = ?
                     ";
-echo "cohortid-".$cohortid;
+//echo "cohortid-".$cohortid;
                     if ($cohortmembers = $DB->get_records_sql($sql, array($cohortid))) {
-print_object($cohortmembers);
+//print_object($cohortmembers);
                         foreach ($cohortmembers as $user) {
 
                             $meditraxcohort->meditrax_add_user_enrolment($enrolid, $user);

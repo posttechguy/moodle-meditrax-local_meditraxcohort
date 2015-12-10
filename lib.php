@@ -586,14 +586,14 @@ class local_plugin_meditraxcohort  {
 
     function meditrax_add_group_member($groupid, $enrolid, $user, $cohort) {
         global $DB, $USER;
-echo "gid".$groupid."<br>";
-print_object($user);
+//echo "gid".$groupid."<br>";
+//print_object($user);
 
         $params = array('groupid'     => $groupid,
                         'userid'  => $user->userid);
 
         if (!($gm = $DB->get_record('groups_members', $params))) {
-echo "uid".$user->userid."<br>";
+//echo "uid".$user->userid."<br>";
             // Add group member
             $addgroupmember                       = new stdClass();
             $addgroupmember->groupid              = $groupid;
@@ -602,7 +602,7 @@ echo "uid".$user->userid."<br>";
             $addgroupmember->component            = 'enrol_cohort';
             $addgroupmember->itemid               = $enrolid;
 //            $addgroupmember->itemid               = 0;
-print_object($addgroupmember);
+//print_object($addgroupmember);
             if (!($gmid = $DB->insert_record('groups_members', $addgroupmember))) {
                 throw new dml_write_exception('Could not add a group member:<br>'.
                                               'groupid - '.$groupid.
